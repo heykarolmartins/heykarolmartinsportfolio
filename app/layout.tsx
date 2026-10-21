@@ -13,11 +13,20 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = { themeColor: '#151613' };
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#f4f4f2' },
+    { media: '(prefers-color-scheme: dark)', color: '#0b0b0c' },
+  ],
+};
+
+// Apply the saved theme before first paint (light is the default).
+const themeScript = `try{var t=localStorage.getItem('hkm-theme');document.documentElement.dataset.theme=(t==='dark'||t==='light')?t:'light'}catch(e){document.documentElement.dataset.theme='light'}`;
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light" suppressHydrationWarning>
+      <head><script dangerouslySetInnerHTML={{ __html: themeScript }} /></head>
       <body className="is-loading">{children}</body>
     </html>
   );
