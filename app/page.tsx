@@ -316,7 +316,7 @@ export default function Home() {
                       <span key={i} className={i === word ? 'hl' : i < word ? 'past' : ''}>{w}</span>
                     ))}
                   </div>
-                  <div className="phone-ui"><span>@yourbrand</span><span>♥ ⟳ ↗</span></div>
+                  <div className="phone-ui"><span>{site.handle}</span><span>♥ ⟳ ↗</span></div>
                 </div>
               </div>
               <div className="editor">
@@ -379,7 +379,7 @@ export default function Home() {
               <h3>{offer.main.name}</h3>
               <p>{offer.main.text}</p>
               <ul>{offer.main.bullets.map((b) => <li key={b}><Check size={14} />{b}</li>)}</ul>
-              <a href="#pricing" className="btn btn-lime magnetic"><span>See the monthly plan</span><ArrowUpRight size={16} /></a>
+              <a href="#pricing" className="btn btn-lime magnetic"><span>See the founding price</span><ArrowUpRight size={16} /></a>
             </article>
             <article className="offer-card tilt rv">
               <div className="glow" />
@@ -427,7 +427,7 @@ export default function Home() {
                     <video src={w.video} muted loop playsInline preload="metadata"
                       onMouseEnter={(e) => e.currentTarget.play()} onMouseLeave={(e) => e.currentTarget.pause()} />
                   ) : (
-                    <div className="placeholder"><i className="p1" /><i className="p2" /><span className="ph-note">Sample in production</span></div>
+                    <div className="placeholder"><i className="p1" /><i className="p2" /><span className="ph-note">Demo edit · coming soon</span></div>
                   )}
                   <div className="work-top"><span>{w.status}</span><span>{w.no} / 0{work.items.length}</span></div>
                   <div className="work-play"><Play size={18} fill="currentColor" /></div>
@@ -470,7 +470,7 @@ export default function Home() {
           <div className="plans">
             {pricing.plans.map((p, i) => (
               <article className={`plan rv ${p.featured ? 'featured' : ''}`} key={p.name} style={{ transitionDelay: `${i * 90}ms` }}>
-                {p.featured && <span className="badge">MOST CHOSEN</span>}
+                {p.featured && <span className="badge">{site.spotsOpen} FOUNDING SPOTS</span>}
                 <h3>{p.name}</h3>
                 <div className="price"><strong>{p.price}</strong><span>{p.unit}</span></div>
                 <p>{p.text}</p>

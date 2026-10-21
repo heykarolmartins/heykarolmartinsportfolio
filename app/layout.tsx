@@ -3,12 +3,12 @@ import type { ReactNode } from 'react';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Karol Martins — Short-form Video Editor for Creators',
+  title: 'Karol Martins — Short-form Video Editor for Coaches & Educators',
   description:
-    'Weekly short-form editing for creators, experts and brands. Designer-grade captions and motion, fully async, delivered on schedule. Get a free sample edit.',
+    'Signature Shorts: 8 short videos a month for coaches, consultants and educators, edited in one consistent brand style and delivered every week. Fully async. Free sample edit.',
   openGraph: {
     title: 'Karol Martins — Cut to keep them watching.',
-    description: 'Weekly short-form editing with a designer’s eye. Free sample edit, no calls required.',
+    description: 'Your weekly shorts, edited in one consistent brand style. Free sample edit, no calls.',
     type: 'website',
   },
 };

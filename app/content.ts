@@ -7,44 +7,46 @@ export const site = {
   email: 'hello@karolmartins.com', // TODO: replace with your real professional email
   role: 'Short-form Video Editor',
   location: 'Brazil · GMT-3',
-  spotsOpen: 2, // monthly client spots currently open — keep this honest
+  handle: '@heykarolmartins',
+  spotsOpen: 3, // founding-client spots still open — keep this honest (0 → switch pricing to "from $450")
   socials: [
-    { label: 'YT JOBS', href: 'https://ytjobs.co/' }, // TODO: your profile URL
     { label: 'INSTAGRAM', href: 'https://www.instagram.com/heykarolmartins/' },
-    { label: 'X / TWITTER', href: 'https://x.com/' }, // TODO
-    { label: 'LINKEDIN', href: 'https://www.linkedin.com/' }, // TODO
+    // Add back only with real profile URLs:
+    // { label: 'YT JOBS', href: 'https://ytjobs.co/...' },
+    // { label: 'LINKEDIN', href: 'https://www.linkedin.com/in/...' },
+    // { label: 'X / TWITTER', href: 'https://x.com/...' },
   ],
 };
 
 export const hero = {
-  eyebrow: `${site.spotsOpen} monthly spots open · Short-form editing`,
+  eyebrow: `${site.spotsOpen} founding-client spots open · Signature Shorts`,
   title: ['Cut to', 'keep them', 'watching.'],
   copy:
-    'Short-form editing for creators, experts and brands that post every week. A designer’s eye, an editor’s rhythm — delivered on schedule, every single week.',
+    'Short-form editing for coaches, consultants and educators who sell through video. Eight shorts a month in one consistent brand style, delivered every week — no calls.',
   primary: 'Get a free sample edit',
   secondary: 'See the work',
   stats: [
     { value: '5+', label: 'years in visual design' },
-    { value: '72h', label: 'to your first edit' },
-    { value: '2', label: 'revision rounds included' },
+    { value: '72h', label: 'to your free sample' },
+    { value: '1', label: 'brand video kit, built in week 1' },
     { value: '0', label: 'calls required — fully async' },
   ],
 };
 
 export const ticker = [
-  'HOOK IN 3 SECONDS',
-  'DESIGNED CAPTIONS',
+  'SIGNATURE SHORTS',
+  'your brand video kit',
   'WEEKLY DELIVERY',
-  'ZERO MISSED DEADLINES',
-  'YOUR LOOK, NOT A PRESET',
-  'FULLY ASYNC',
+  'late video? it’s free',
+  'HOOK NOTES EVERY DELIVERY',
+  'fully async',
 ];
 
 export const problem = {
   kicker: '01 / THE PROBLEM',
   title: 'You’re great on camera.\nThe footage still sits\nin a folder.',
   pains: [
-    { k: 'TIME', t: 'Editing eats the hours you should spend creating, selling or resting.' },
+    { k: 'TIME', t: 'Editing eats the hours you should spend coaching, selling or resting.' },
     { k: 'LOOK', t: 'Your videos don’t look like they come from the same brand.' },
     { k: 'TRUST', t: 'Editors ghost, miss deadlines, or need you to explain everything twice.' },
     { k: 'SAMENESS', t: 'Same captions, same zooms, same template pack as everyone else in your niche.' },
@@ -55,10 +57,10 @@ export const offer = {
   kicker: '02 / THE OFFER',
   title: 'One editor.\nA weekly rhythm.\nA look that’s yours.',
   main: {
-    tag: 'MAIN SERVICE',
-    name: 'Short-form, every week',
-    text: 'Your raw footage becomes ready-to-post Reels, TikToks and Shorts — paced for retention, captioned with intention and built on a visual system made for your brand.',
-    bullets: ['Hook-first structure', 'Brand-designed captions', 'B-roll & simple motion graphics', 'Sound cleanup & music', '9:16 exports ready to post'],
+    tag: 'SIGNATURE SHORTS',
+    name: 'Your shorts, in one brand style',
+    text: 'Eight short videos a month, edited in one consistent brand style and delivered every week. You film and teach — every video looks like it came from the same brand.',
+    bullets: ['Week 1: your Brand Video Kit', '2 videos a week, on a written schedule', 'A hook note with every delivery', 'Up to 2 unused videos roll over', 'Late video? That one is free'],
   },
   second: {
     tag: 'ALSO AVAILABLE',
@@ -88,7 +90,7 @@ export const pillars = {
       no: '03',
       name: 'On time. Every time.',
       stat: '100%',
-      text: 'Deadlines are agreed in writing and treated like a contract. If anything could slip, you hear it from me first — days before, never after.',
+      text: 'Delivery dates are agreed in writing. If anything could slip, you hear it from me first. And if a video misses its date, that video is free.',
     },
   ],
 };
@@ -98,7 +100,7 @@ export const pillars = {
 export const work = {
   kicker: '04 / SELECTED WORK',
   title: 'Edits built\nto be watched\nto the end.',
-  aside: 'Each piece shows one skill a weekly client gets: retention pacing, clean reframing, and motion that carries a brand.',
+  aside: 'Demo edits, labelled as demos. Each one shows a skill a weekly client gets: retention pacing, clean reframing, and motion that carries a brand.',
   items: [
     { no: '01', status: 'DEMO EDIT', title: 'Personal brand — hook & retention', meta: '0:42 · 9:16 · Captions · B-roll', tone: 'lime', video: '' },
     { no: '02', status: 'DEMO EDIT', title: 'Podcast clip — vertical reframe', meta: '0:58 · 9:16 · Two speakers', tone: 'stone', video: '' },
@@ -111,10 +113,10 @@ export const process = {
   title: 'Fully async.\nNothing gets lost.',
   note: 'No calls, no timezone juggling. Every brief, decision and revision lives in writing — so nothing is forgotten and nothing is “I thought you said”.',
   steps: [
-    { no: '01', time: 'DAY 0', name: 'Send your footage', text: 'Drop a folder link and fill a 5-minute brief: references, brand assets, posting days.' },
-    { no: '02', time: '≤ 72H', name: 'Get your style frame', text: 'Your first edit plus the visual system — caption style, colors, type and pacing — locked for every video after.' },
+    { no: '01', time: 'DAY 0', name: 'Send your footage', text: 'Drop a folder link and fill a 5-minute written brief: references, brand assets, posting days.' },
+    { no: '02', time: 'WEEK 1', name: 'Get your Brand Video Kit', text: 'Caption style, colors, fonts, motion and cover — defined, documented and used in every video after.' },
     { no: '03', time: '2 ROUNDS', name: 'Comment, don’t meet', text: 'Leave timestamped notes. I apply them, confirm each one in writing and send the final.' },
-    { no: '04', time: 'WEEKLY', name: 'Receive on schedule', text: 'Ready-to-post files land on the agreed day, every week. You film, I keep the line moving.' },
+    { no: '04', time: 'WEEKLY', name: 'Receive on schedule', text: 'Ready-to-post files land on the agreed day, with a short note on the hook for your next recording.' },
   ],
 };
 
@@ -132,12 +134,12 @@ export const pricing = {
       featured: false,
     },
     {
-      name: 'Short-form Monthly',
-      price: 'from $390',
-      unit: '/ month',
-      text: 'The weekly engine for creators who post consistently.',
-      items: ['8 vertical videos, up to 60s each', 'Brand-designed captions', 'B-roll & simple motion graphics', 'Sound cleanup & music', '2 revision rounds per video', 'Weekly delivery calendar'],
-      cta: 'Start this month',
+      name: 'Signature Shorts',
+      price: '$390',
+      unit: '/ month · founding',
+      text: `Founding-client price, locked for 6 months. ${site.spotsOpen} spots — after that, new clients start from $450.`,
+      items: ['8 vertical videos, up to 60s each', 'Brand Video Kit in week 1', '2 videos a week, on a written schedule', 'Hook note with every delivery', '2 revision rounds per video', 'Up to 2 unused videos roll over', 'Late video? That one is free'],
+      cta: 'Claim a founding spot',
       featured: true,
     },
     {
@@ -150,15 +152,18 @@ export const pricing = {
       featured: false,
     },
   ],
-  footnote: 'Paid monthly, upfront. Higher volume, longer videos or complex motion are quoted separately — in writing, within 24 hours.',
+  footnote: 'Paid monthly, upfront. Not included: videos over 60s, complex motion, scripting or posting — quoted separately, in writing, within 24 hours. A late video is credited in full on your next invoice.',
 };
 
 export const faq = {
   kicker: '07 / FAQ',
   title: 'Before you ask.',
   items: [
+    { q: 'Who is this for?', a: 'Coaches, consultants and educators who post short-form video at least 2–3 times a week, film their own footage and use video to win clients.' },
+    { q: 'What does “founding client” mean?', a: `The first ${site.spotsOpen} clients pay $390/month, locked for 6 months. Once those spots are taken, new clients start from $450/month.` },
+    { q: 'What if a video is late?', a: 'Every delivery date is agreed in writing. If a video misses its date, that video is free — it comes off your next invoice.' },
     { q: 'Do we need to get on calls?', a: 'No. Everything runs async: a written brief, timestamped feedback and a shared delivery calendar. It’s faster for you and keeps every decision documented.' },
-    { q: 'How fast is the turnaround?', a: 'Your first edit and style frame arrive within 72 hours. After that, videos are delivered weekly on the day we agree.' },
+    { q: 'How fast is the turnaround?', a: 'Your free sample arrives within 72 hours. Your Brand Video Kit is ready in week 1, and then 2 videos land every week on the days we agree.' },
     { q: 'What do I need to send?', a: 'Raw footage (a Drive or Dropbox link is fine), 2–3 reference videos you like, and your logo, fonts or colors if you have them.' },
     { q: 'What if I don’t like the edit?', a: 'Every video includes two revision rounds. And you can see a free sample from your own footage before paying for anything.' },
     { q: 'Which tools do you use?', a: 'Adobe Premiere Pro for editing, plus custom-built motion graphics and caption styles designed for your brand.' },
