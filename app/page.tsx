@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState, type FormEvent } from 'react';
-import { ArrowUpRight, ArrowDownRight, Play, Menu, X, Plus, Check } from 'lucide-react';
+import { ArrowUpRight, ArrowDownRight, Play, Menu, X, Plus, Check, Sun, Moon } from 'lucide-react';
 import { site, hero, ticker, problem, offer, pillars, work, process, pricing, faq, closing } from './content';
 
 const SECTIONS: [string, string, string][] = [
@@ -51,6 +51,19 @@ export default function Home() {
   const [word, setWord] = useState(0);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [sent, setSent] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+
+  useEffect(() => {
+    const t = document.documentElement.dataset.theme;
+    if (t === 'dark' || t === 'light') setTheme(t);
+  }, []);
+
+  const toggleTheme = () => {
+    const next = theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem('hkm-theme', next); } catch {}
+    setTheme(next);
+  };
 
   const barRef = useRef<HTMLDivElement>(null);
   const tcRef = useRef<HTMLSpanElement>(null);
@@ -251,6 +264,7 @@ export default function Home() {
 
       <header className="nav">
         <a className="wordmark" href="#top" aria-label={`${site.name} home`}><span className="wordmark-h">h</span>KM<sup>®</sup></a>
+        <div className="nav-end">
         <nav className={menuOpen ? 'nav-links open' : 'nav-links'}>
           <a href="#work" onClick={close}>Work</a>
           <a href="#process" onClick={close}>Process</a>
@@ -258,9 +272,13 @@ export default function Home() {
           <a href="#faq" onClick={close}>FAQ</a>
           <a href="#start" className="btn btn-ink magnetic" onClick={close}><span>Free sample</span><ArrowUpRight size={15} /></a>
         </nav>
+        <button className="theme-toggle" onClick={toggleTheme} aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}>
+          {theme === 'dark' ? <Sun size={16} strokeWidth={1.6} /> : <Moon size={16} strokeWidth={1.6} />}
+        </button>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu" aria-expanded={menuOpen}>
           {menuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
+        </div>
       </header>
 
       <main>
