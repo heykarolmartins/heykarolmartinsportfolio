@@ -270,7 +270,7 @@ export default function Home() {
           <a href="#process" onClick={close}>Process</a>
           <a href="#pricing" onClick={close}>Pricing</a>
           <a href="#faq" onClick={close}>FAQ</a>
-          <a href="#start" className="btn btn-ink magnetic" onClick={close}><span>Free sample</span><ArrowUpRight size={15} /></a>
+          <a href="#start" className="btn btn-primary btn-sm magnetic" onClick={close}><span>Free sample</span><ArrowUpRight size={15} /></a>
         </nav>
         <button className="theme-toggle" onClick={toggleTheme} aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}>
           {theme === 'dark' ? <Sun size={16} strokeWidth={1.6} /> : <Moon size={16} strokeWidth={1.6} />}
@@ -299,7 +299,7 @@ export default function Home() {
               <div className={`hero-foot ${loaded ? 'in' : ''}`}>
                 <p className="hero-copy">{hero.copy}</p>
                 <div className="hero-ctas">
-                  <a href="#start" className="btn btn-lime btn-lg magnetic"><span>{hero.primary}</span><ArrowUpRight size={18} /></a>
+                  <a href="#start" className="btn btn-primary btn-lg magnetic"><span>{hero.primary}</span><ArrowUpRight size={18} /></a>
                   <a href="#work" className="btn btn-ghost magnetic"><span>{hero.secondary}</span><ArrowDownRight size={16} /></a>
                 </div>
               </div>
@@ -379,7 +379,7 @@ export default function Home() {
               <h3>{offer.main.name}</h3>
               <p>{offer.main.text}</p>
               <ul>{offer.main.bullets.map((b) => <li key={b}><Check size={14} />{b}</li>)}</ul>
-              <a href="#pricing" className="btn btn-lime magnetic"><span>See the founding price</span><ArrowUpRight size={16} /></a>
+              <a href="#pricing" className="btn btn-primary magnetic"><span>See the founding price</span><ArrowUpRight size={16} /></a>
             </article>
             <article className="offer-card tilt rv">
               <div className="glow" />
@@ -387,7 +387,7 @@ export default function Home() {
               <h3>{offer.second.name}</h3>
               <p>{offer.second.text}</p>
               <ul>{offer.second.bullets.map((b) => <li key={b}><Check size={14} />{b}</li>)}</ul>
-              <a href="#start" className="btn btn-outline-light magnetic"><span>Ask for a quote</span><ArrowUpRight size={16} /></a>
+              <a href="#start" className="btn btn-ghost-inv magnetic"><span>Ask for a quote</span><ArrowUpRight size={16} /></a>
             </article>
           </div>
         </section>
@@ -475,7 +475,7 @@ export default function Home() {
                 <div className="price"><strong>{p.price}</strong><span>{p.unit}</span></div>
                 <p>{p.text}</p>
                 <ul>{p.items.map((it) => <li key={it}><Check size={14} />{it}</li>)}</ul>
-                <a href="#start" className={`btn magnetic ${p.featured ? 'btn-lime' : 'btn-outline-light'}`}><span>{p.cta}</span><ArrowUpRight size={16} /></a>
+                <a href="#start" className={`btn magnetic ${p.featured ? 'btn-primary' : 'btn-ghost-inv'}`}><span>{p.cta}</span><ArrowUpRight size={16} /></a>
               </article>
             ))}
           </div>
@@ -534,7 +534,7 @@ export default function Home() {
                 </label>
               </div>
               <label><span>Anything I should know? (optional)</span><textarea name="notes" rows={3} placeholder="References you like, deadlines, goals…" /></label>
-              <button className="btn btn-lime btn-lg magnetic" type="submit"><span>{sent ? 'Opening your email…' : closing.cta}</span><ArrowUpRight size={18} /></button>
+              <button className="btn btn-primary btn-lg magnetic" type="submit"><span>{sent ? 'Opening your email…' : closing.cta}</span><ArrowUpRight size={18} /></button>
               <p className="form-note">Prefer email? Write to <a href={`mailto:${site.email}`}>{site.email}</a></p>
             </form>
           </div>
